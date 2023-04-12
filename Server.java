@@ -12,7 +12,7 @@ public class Server {
         try {
             while(!serverSocket.isClosed()) {
 
-                serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("A new client has connected.");
                 ClientHandler clientHandler = new ClientHandler(socket);
 
